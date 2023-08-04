@@ -5,11 +5,16 @@
  */
 package com.examly.springapp;
 
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
-//Annotation
-@Repository
-//Class
-public interface TaskRepository extends CrudRepository<Task, Long> {
-}  
+public interface TaskService {
+
+    // save operation
+    Task saveTask(Task Task);
+
+    // read operation
+    List<Task> fetchTaskList();
+
+    // delete operation
+    void deleteTaskById(Long TaskId);
+}
