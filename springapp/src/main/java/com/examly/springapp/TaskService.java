@@ -10,13 +10,13 @@ import java.util.List;
 public interface TaskService {
 
     // save operation
-    Task saveTask(Task Task);
+    Task saveTask(Task task);
 
     // read operation
     List<Task> fetchTaskList();
 
     // delete operation
-    void deleteTaskById(Long TaskId);
+    void deleteTaskById(Long taskId);
 
     Task getTaskById(Long id);
 
