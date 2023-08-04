@@ -22,6 +22,7 @@ public class TaskController {
 
     @PostMapping("/saveTask")
     public Task saveTask(@RequestBody Task task) {
+       
         return taskService.saveTask(task);
     }
 
@@ -33,7 +34,7 @@ public class TaskController {
 
     @GetMapping("/getTask/{id}")
     public Task getTask(@PathVariable("id") Long id) {
-
+        System.out.println(taskService.getTaskById(id));
         return taskService.getTaskById(id);
     }
 
