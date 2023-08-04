@@ -17,4 +17,7 @@ public interface TaskService {
 
     // delete operation
     void deleteTaskById(Long TaskId);
+
+    Task getTaskById(Long id);
+
 }
