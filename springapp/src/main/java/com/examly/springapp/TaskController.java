@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TaskController {
     
     @PostMapping("/saveTask")
-	public Employee saveTask(@RequestBody Employee emp) {
+	public void saveTask(@RequestBody Employee emp) {
 		repository.store(emp);
 		return emp;
 	}
